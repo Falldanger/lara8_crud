@@ -33,5 +33,9 @@
         @endforeach
         </tbody>
     </table>
-    {{$users->links()}}
+    <div class="d-flex">
+        <div class="mx-auto">
+            {{$users->onEachSide(1)->links("pagination::bootstrap-4")}}
+        </div>
+    </div>
 @endsection

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,9 +6,9 @@
     <title>@yield('title')</title>
 
 
-
     <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <meta name="theme-color" content="#7952b3">
 
@@ -39,6 +38,12 @@
 <div class="container">
     <h1>@yield('title')</h1>
     <main>
+        @if(session('danger'))
+            <div class="alert alert-danger">{{session('danger')}}</div>
+        @endif
+            @if(session('success'))
+                <div class="alert alert-success">{{session('success')}}</div>
+            @endif
         @yield('content')
     </main>
 

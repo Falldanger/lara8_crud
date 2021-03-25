@@ -21,7 +21,7 @@
                        value="{{old('name',isset($user) ? $user->name : null)}}"
                        type="text" class="form-control" placeholder="Name" aria-label="Name">
                 @error('name')
-                    <div class="alert alert-danger">{{$message}}</div>
+                <div class="alert alert-danger">{{$message}}</div>
                 @enderror
             </div>
         </div>
@@ -37,7 +37,7 @@
         </div>
         <div class="row mt-3">
             <div class="col">
-                <button type="submit" class="btn btn-success">Create</button>
+                <button type="submit" class="btn btn-success">{{isset($user) ?'Edit':'Create'}}</button>
             </div>
         </div>
     </form>
